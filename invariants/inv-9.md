@@ -199,7 +199,9 @@ sender can react:
 
 - it can spend the sender's gas on something useful to the recipient, such as tokens whose only cost to mint is
   gas, or new storage slots
-- it can call other contracts that authorize by `tx.origin`, as the sender's wallet
+- it can call other contracts that authorize by `tx.origin`, as the sender's wallet. Therefore, the sender's
+  wallet must not control any `tx.origin`-based authorizations. This is achieved if the sender's wallet holds
+  only ETH.
 
 ## Other things to consider
 
